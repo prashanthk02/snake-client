@@ -13,23 +13,28 @@ const connect = function () {
   //print a msg on successful connection
   conn.on('connect', () => {
     console.log('connected to a bunch of snakes')
-  })
+  });
 
   //send a msg to the server to set name
   conn.on('connect', () => {
-    conn.write('Name: pk', )
-  })
+    conn.write('Name: pk')
+  });
+
+  //move up
+  // conn.on('connect', () => {
+  //   conn.write('Move: up')
+  // });
 
   //handling incoming data and ending the connection
   conn.on('data', (data) => {
     console.log(data.toString());
     conn.end();
-  })
+  });
 
   //printing the following on end of connection
   conn.on('end', () => {
     console.log('you\'re dead meat')
-  })
+  });
 
   return conn;
 
