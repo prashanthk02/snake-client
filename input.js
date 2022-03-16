@@ -1,5 +1,4 @@
 let connection;// Stores the active TCP connection object.
-//const net = require("net");
 
 // setup interface to handle user input from stdin
 
@@ -28,6 +27,12 @@ const setupInput = function (conn) {
     }
     if (data === 'd') {
       connection.write('Move: right');
+    }
+    if (data === 'q') {
+      connection.write('Say: Have fun snakes');
+    }
+    if (data === 't') {
+      connection.write('Say: having fun!!!');
     }
 
   };
